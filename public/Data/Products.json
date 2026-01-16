@@ -1,0 +1,82 @@
+[
+  {
+    "id":"1",
+    "name": "iPhone 15 Pro Max",
+    "price": 155000,
+    "category": "Mobile",
+    "image": "/images/iphone.jpg",
+    "description": "The iPhone 15 Pro Max is designed for users who demand top-tier performance and premium build quality. It features the powerful A17 Pro chip, which ensures smooth multitasking, gaming, and professional-level usage. The advanced camera system allows you to capture stunning photos and videos in different lighting conditions. Its sleek titanium design, long battery life, and iOS ecosystem make it a perfect choice for modern tech enthusiasts."
+  },
+  {
+    "id":"2",
+    "name": "Samsung Galaxy S24 Ultra",
+    "price": 145000,
+    "category": "Mobile",
+    "image": "/images/samsung.jpg",
+    "description": "The Samsung Galaxy S24 Ultra is a flagship smartphone built for power users who want performance and innovation. It offers a stunning AMOLED display with vibrant colors and smooth scrolling. The advanced camera system is perfect for photography lovers, while the strong processor ensures lag-free performance. With premium materials, long battery life, and productivity features, it is ideal for both personal and professional use."
+  },
+  {
+    "id":"3",
+    "name": "MacBook Pro M3",
+    "price": 220000,
+    "category": "Laptop",
+    "image": "/images/macbook.jpg",
+    "description": "The MacBook Pro M3 is a powerful laptop designed for developers, designers, and content creators. Powered by Apple’s latest M3 chip, it delivers exceptional speed, efficiency, and battery performance. The Retina display provides sharp visuals and accurate colors, making it ideal for creative work. Its premium build quality, silent performance, and macOS ecosystem make it one of the best professional laptops available."
+  },
+  {
+    "id":"4",
+    "name": "Dell XPS 15",
+    "price": 185000,
+    "category": "Laptop",
+    "image": "/images/dell.jpg",
+    "description": "The Dell XPS 15 is a premium Windows laptop built for professionals and power users. It features a high-resolution display, powerful processor, and excellent keyboard experience. The slim and elegant design makes it portable, while the strong performance ensures smooth multitasking. Whether you are coding, editing videos, or working on large projects, this laptop delivers reliable performance and modern aesthetics."
+  },
+  {
+    "id":"5",
+    "name": "Sony Alpha A7 IV Camera",
+    "price": 210000,
+    "category": "Camera",
+    "image": "/images/camera.jpg",
+    "description": "The Sony Alpha A7 IV is a professional mirrorless camera designed for photographers and videographers. It offers excellent image quality with a high-resolution sensor and advanced autofocus system. The camera performs exceptionally well in low-light conditions and supports high-quality video recording. Its robust build, modern features, and versatility make it a perfect choice for content creators and professionals."
+  },
+  {
+    "id":"6",
+    "name": "Canon EOS R10",
+    "price": 125000,
+    "category": "Camera",
+    "image": "/images/canon.jpg",
+    "description": "The Canon EOS R10 is a compact mirrorless camera designed for beginners and intermediate users. It provides sharp image quality, fast autofocus, and reliable performance for both photography and video recording. The lightweight design makes it easy to carry for travel and daily use. With Canon’s trusted color science and modern features, it is a great choice for aspiring creators."
+  },
+  {
+    "id":"7",
+    "name": "DJI Mini 3 Pro Drone",
+    "price": 98000,
+    "category": "Drone",
+    "image": "/images/drone.jpg",
+    "description": "The DJI Mini 3 Pro is a lightweight and powerful drone designed for aerial photography and videography. It offers excellent flight stability, high-quality camera output, and advanced safety features. Despite its compact size, it delivers impressive performance and long flight time. This drone is perfect for beginners and professionals who want stunning aerial shots without carrying heavy equipment."
+  },
+  {
+    "id":"8",
+    "name": "DJI Air 2S",
+    "price": 135000,
+    "category": "Drone",
+    "image": "/images/drone2.jpg",
+    "description": "The DJI Air 2S is a high-performance drone built for creators who want cinematic aerial footage. It features a powerful camera capable of capturing detailed photos and videos. The intelligent flight modes help users capture professional shots easily. With strong build quality, obstacle sensing, and reliable performance, it is an excellent drone for travel, filmmaking, and creative projects."
+  },
+  {
+    "id":"9",
+    "name": "Logitech MX Master 3S Mouse",
+    "price": 12000,
+    "category": "Accessory",
+    "image": "/images/mouse.jpg",
+    "description": "The Logitech MX Master 3S is a premium wireless mouse designed for productivity and comfort. It features an ergonomic design that reduces hand fatigue during long working hours. The smooth scrolling wheel and customizable buttons improve workflow efficiency. It is perfect for developers, designers, and professionals who need precision, comfort, and reliability in daily computer usage."
+  },
+  {
+    "id":"10",
+    "name": "Sony WH-1000XM5 Headphones",
+    "price": 42000,
+    "category": "Accessory",
+    "image": "/images/headphone.jpg",
+    "description": "The Sony WH-1000XM5 headphones are known for industry-leading noise cancellation and premium sound quality. They provide a comfortable fit for long listening sessions and excellent battery life. The advanced audio technology ensures clear sound for music, calls, and meetings. These headphones are ideal for professionals, travelers, and anyone who values immersive audio experience."
+  }
+]
