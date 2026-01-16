@@ -2,19 +2,18 @@
 
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
-
-async function getProduct(id) {
-  const res = await fetch("http://localhost:3000/data/products.json", { cache: "no-store" });
-  const products = await res.json();
-
-  return products.find((p) => String(p.id) === String(id));
-}
+// ১. ডাটা সরাসরি ইমপোর্ট (৪ ধাপ পেছনে গিয়ে public ফোল্ডারে ঢুকবে)
+import products from "../../../../public/Data/Products.json";
+import Link from "next/link";
 
 const ProductDetails = async ({ params }) => {
+  // ২. আইডি উদ্ধার করা
   const { id } = await params;
 
-  const product = await getProduct(id);
+  // ৩. সরাসরি অ্যারে থেকে প্রোডাক্ট খুঁজে বের করা (fetch এর দরকার নেই)
+  const product = products.find((p) => String(p.id) === String(id));
 
+  // ৪. যদি প্রোডাক্ট না পাওয়া যায়
   if (!product) {
     return (
       <div className="min-h-screen flex flex-col bg-gray-50">
@@ -33,6 +32,7 @@ const ProductDetails = async ({ params }) => {
     );
   }
 
+  // ৫. ডিজাইন একদম আগের মতোই রাখা হয়েছে
   return (
     <div className="min-h-screen flex flex-col bg-gray-50">
       <Navbar />
@@ -70,7 +70,7 @@ const ProductDetails = async ({ params }) => {
                   {product.description}
                 </p>
 
-                {/* Simple Specs (optional, তোর json-এ থাকলে যোগ করতে পারিস) */}
+                {/* Simple Specs */}
                 <div className="grid grid-cols-2 gap-6 mb-12 text-gray-700">
                   <div>
                     <span className="font-semibold block text-gray-900">Category</span>
@@ -83,7 +83,7 @@ const ProductDetails = async ({ params }) => {
                 </div>
 
                 {/* Back Button */}
-                <a
+                <Link
                   href="/items"
                   className="inline-flex items-center gap-2 text-blue-600 hover:text-blue-800 font-medium text-lg transition"
                 >
@@ -91,7 +91,7 @@ const ProductDetails = async ({ params }) => {
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
                   </svg>
                   Back to All Products
-                </a>
+                </Link>
               </div>
             </div>
           </div>

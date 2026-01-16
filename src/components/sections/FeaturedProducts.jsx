@@ -1,17 +1,11 @@
 "use client";
 
-import React, { useEffect, useState } from "react";
+import React from "react";
 import Link from "next/link";
+import productsData from "../../../public/Data/Products.json";
 
 const FeaturedProducts = () => {
-  const [products, setProducts] = useState([]);
-
-  useEffect(() => {
-    fetch("/data/products.json")
-      .then((res) => res.json())
-      .then((data) => setProducts(data.slice(0, 6)))
-      .catch((err) => console.error("Error fetching products:", err));
-  }, []);
+  const products = productsData.slice(0, 6);
 
   return (
     <section className="py-16 md:py-20 bg-gray-50">
