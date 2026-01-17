@@ -7,7 +7,7 @@ export function middleware(request) {
 
   const { pathname } = request.nextUrl;
 
-  if (!token && pathname.startsWith("/items")) {
+  if (!token && pathname.startsWith("/items/")) {
    
     return NextResponse.redirect(new URL("/login", request.url));
   }

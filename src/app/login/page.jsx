@@ -80,7 +80,7 @@ export default function Login() {
 
             {/* Auto-fill Button */}
             <button
-              type="button" // type="submit" না দিয়ে type="button" যাতে ফর্ম সাবমিট না হয়
+              type="button" 
               onClick={autoFillCredentials}
               className="w-full mt-4 bg-green-500 hover:bg-green-600 text-white font-medium py-3 rounded-xl text-md transition transform hover:scale-105 shadow-md"
             >
