@@ -2,24 +2,25 @@
 "use client";
 
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 import Cookies from "js-cookie";
-import { Menu, X } from "lucide-react"; // lucide-react থেকে আইকন (npm install lucide-react)
+import { Menu, X } from "lucide-react";
 
 export default function Navbar() {
+  const pathname = usePathname();
   const [isLoggedIn, setIsLoggedIn] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-  // লগইন স্ট্যাটাস চেক করা
   useEffect(() => {
-    const loggedIn = Cookies.get("isLoggedIn") === "true";
+    const loggedIn = Cookies.get("auth-token") === "true";
     setIsLoggedIn(loggedIn);
   }, []);
 
   const handleLogout = () => {
-    Cookies.remove("isLoggedIn");
+    Cookies.remove("auth-token", { path: "/" });
     setIsLoggedIn(false);
-    window.location.href = "/"; // হোমে রিডিরেক্ট
+    window.location.href = "/";
   };
 
   return (
@@ -38,10 +39,21 @@ export default function Navbar() {
 
           {/* Desktop Menu */}
           <div className="hidden md:flex items-center space-x-10">
-            <Link href="/" className="hover:text-blue-200 transition font-medium">
+            <Link
+              href="/"
+              className={`transition font-medium ${
+                pathname === "/" ? "underline underline-offset-4" : "hover:text-blue-200"
+              }`}
+            >
               Home
             </Link>
-            <Link href="/items" className="hover:text-blue-200 transition font-medium">
+
+            <Link
+              href="/items"
+              className={`transition font-medium ${
+                pathname.startsWith("/items") ? "underline underline-offset-4" : "hover:text-blue-200"
+              }`}
+            >
               Items
             </Link>
 
@@ -55,7 +67,9 @@ export default function Navbar() {
             ) : (
               <Link
                 href="/login"
-                className="bg-white text-indigo-700 hover:bg-gray-100 font-bold px-6 py-2 rounded-full transition transform hover:scale-105 shadow-md"
+                className={`transition font-medium ${
+                  pathname === "/login" ? "underline underline-offset-4" : "hover:text-blue-200"
+                }`}
               >
                 Login
               </Link>
@@ -76,14 +90,19 @@ export default function Navbar() {
           <div className="md:hidden py-4 space-y-4 border-t border-white/20">
             <Link
               href="/"
-              className="block hover:text-blue-200 transition py-2"
+              className={`block transition py-2 ${
+                pathname === "/" ? "underline underline-offset-4" : "hover:text-blue-200"
+              }`}
               onClick={() => setIsMenuOpen(false)}
             >
               Home
             </Link>
+
             <Link
               href="/items"
-              className="block hover:text-blue-200 transition py-2"
+              className={`block transition py-2 ${
+                pathname.startsWith("/items") ? "underline underline-offset-4" : "hover:text-blue-200"
+              }`}
               onClick={() => setIsMenuOpen(false)}
             >
               Items
@@ -102,7 +121,9 @@ export default function Navbar() {
             ) : (
               <Link
                 href="/login"
-                className="block w-full bg-white text-indigo-700 hover:bg-gray-100 font-bold py-3 rounded-full text-center transition"
+                className={`block transition py-3 rounded-full text-center ${
+                  pathname === "/login" ? "underline underline-offset-4" : "hover:text-blue-200"
+                }`}
                 onClick={() => setIsMenuOpen(false)}
               >
                 Login

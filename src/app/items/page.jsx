@@ -5,7 +5,8 @@ import Navbar from "@/components/Navbar";
 
 import products from "../../../public/Data/Products.json";
 
-const AllProducts = () => {
+
+const AllProducts = async() => {
  
 
   return (
