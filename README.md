@@ -1,36 +1,69 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# TechItem Hub
 
-## Getting Started
+A modern, responsive e-commerce style web application built with **Next.js 16 (App Router)**. It features a beautiful landing page, mock authentication, product listing, and detailed product views.
 
-First, run the development server:
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+### Live Demo
+🌐 [https://techitem-hub.vercel.app/](https://techitem-hub.vercel.app)  
+*(Replace with your actual Vercel link)*
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### Features Implemented
+- **Landing Page** with 7 beautifully designed sections (Hero, Featured Products, Why Choose Us, Testimonials, Latest News, Brands, Call to Action)
+- **Mock Authentication** using cookies (hardcoded credentials)
+- **Public Product List** (/items) with responsive cards
+- **Product Details** page (/items/[id])
+- **Protected Routes** using middleware (details page requires login)
+- **Responsive Design** with Tailwind CSS (mobile-first)
+- **Navbar & Footer** with active link underline, logo, login/logout
+- **Loading States** for better UX
+- **Auto-fill credentials** button on login page
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+### Tech Stack
+- **Next.js 16** (App Router)
+- **Tailwind CSS** (for styling)
+- **JavaScript Cookies** (for mock auth)
+- **Lucide React** (icons)
+- **Vercel** (deployment)
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### Setup & Installation
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/akashsarker2478/techitem-hub.git
+   cd techitem-hub
 
-## Learn More
+Install dependencies:Bashnpm install
+Run the development server:Bashnpm run devOpen http://localhost:3000 in your browser.
 
-To learn more about Next.js, take a look at the following resources:
+Routes Overview
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+/ → Landing Page (Home)
+/login → Login Page
+/items → All Products List (Public)
+/items/[id] → Product Details (Protected - requires login)
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Login Credentials (Mock)
 
-## Deploy on Vercel
+Email:test@example.com
+Password: 123456
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Auto-fill button available on login page for quick testing.
+Deployment
+Deployed on Vercel (automatic from GitHub repo)
+Live Link: https://techitem-hub.vercel.app
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+
+Landing Page
+Products List
+Product Details
+Login Page
+
+Future Improvements (Optional)
+
+Real authentication with NextAuth.js (Google login)
+Add to Cart functionality
+Add Product functionality
+Admin dashboard for adding products
+Search & filter on products
+
+Made with ❤️ by Akash
+Last updated: January 17, 2026
